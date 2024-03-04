@@ -1,0 +1,5 @@
+services:
+  collector:
+    build: .
+    volumes:
+      - ./database:/collector/database:rw

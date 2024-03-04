@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: srf.ch comment collector
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - orcid: 'https://orcid.org/0009-0007-1776-2916'
+    given-names: Mauro Mattia
+    family-names: Sbicego
+repository-code: 'https://github.com/maurosbicego/srf-comment-collector'
+abstract: >-
+  A tool that can be used to collect comments from srf.ch
+  (Swiss media platform in german language). srf.ch curates
+  the comments which results in high quality data that can
+  be used for different research purposes
+license: GPL-3.0
