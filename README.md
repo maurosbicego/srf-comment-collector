@@ -19,7 +19,8 @@ Contains all the users that posted a comment with their username and full name
 #### Comment
 Definition for a comment. References the article for which it was written and references the User that wrote the comment. Can also reference another comment if it is a reply. Contains the amount of likes the comment received.
 
-## Usage
+## Running the tool
+The tool needs to be started once (ideally docker-compose or podman), it then reloads the data every hour. This time-period can be set in `settings.py` when running directly with python or `settings-docker.py` when using docker-compose, docker or podman
 ### Run with docker-compose
 
 `sudo docker-compose up -d`
@@ -29,6 +30,12 @@ Definition for a comment. References the article for which it was written and re
 2. Make sure the directory `database` exists
 3. Run with volume: `podman run -v $(pwd)/database:/collector/database srf-collector`
 
+### Run directly with python3
+1. Install requirements `pip3 install -r requirements.txt`
+2. Run it `python3 main.py`
+
+## Read the data
+Data is saved into an sqlite-databse. It is located in the `database` directory where the tool is run. The database contains the tables mentioned above. Use SQL to perform your analysis. I might implement some functionality to analyse the data in the tool itself later.
 
 ## Citation
 Should you use this tool for an academic publication, please cite it as outlined in the `CITATION.cff` file.
